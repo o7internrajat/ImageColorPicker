@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardBackgroundColor="@color/purple_700"
+            app:cardPreventCornerOverlap="true"
+            app:cardElevation="5dp"
+            >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/tvHex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="25sp"
+                            android:textColor="@color/black"
+                            android:text="Hex Code:"/>
+
+                        <TextView
+                            android:id="@+id/tvCode1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="25sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toRightOf="@+id/tvHex"
+                            android:textColor="@color/black"
+                            android:text=""/>
+
+                        <ImageView
+                            android:id="@+id/ivDelete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_delete"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentEnd="true"/>
+
+
+                </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+
+
+

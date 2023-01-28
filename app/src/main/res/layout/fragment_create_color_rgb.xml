@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateFragment"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FF4081">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="SeekBar Colour Picker"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/red" />
+
+        <SeekBar
+            android:id="@+id/sbRed"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rgb_red"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/green" />
+
+        <SeekBar
+            android:id="@+id/sbGreen"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rgb_green"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/blue" />
+
+        <SeekBar
+            android:id="@+id/sbBlue"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rgb_blue"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvColorCode"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/code"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+
+    <Button
+        android:id="@+id/btnSaveCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:background="@drawable/textshape"
+        android:text="Save"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tvColorShow"
+            android:layout_width="250dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="50dp"
+            android:text="@string/color"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:src="@drawable/ic_launcher_background"
+            />
+    </LinearLayout>
+</LinearLayout>

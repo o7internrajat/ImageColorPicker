@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FF4081">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Image Picker"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="410dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_launcher_background"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+    <Button
+        android:id="@+id/btnImagePick"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Upload Image"
+        android:textColor="@color/white"
+        android:background="@drawable/textshape"
+        tools:ignore="HardcodedText" />
+
+
+
+        <Button
+            android:id="@+id/btnSaveCode"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:background="@drawable/textshape"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvColorCode"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+
+
+
+        <TextView
+            android:id="@+id/tvColorShow"
+            android:layout_width="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_background"
+            />
+
+</LinearLayout>

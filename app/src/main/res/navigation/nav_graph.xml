@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imageFragment">
+
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.o7solutions.imgrgbpicker.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image_picker" />
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.o7solutions.imgrgbpicker.CreateFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create_color_rgb" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.o7solutions.imgrgbpicker.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_hex_code_history" />
+</navigation>
