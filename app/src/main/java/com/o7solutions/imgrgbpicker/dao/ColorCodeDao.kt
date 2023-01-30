@@ -14,5 +14,4 @@ interface ColorCodeDao {
 
     @Query("SELECT * FROM color_code ORDER BY id ASC")
     fun getAllUser(): List<ColorCode>
-
 }

@@ -95,35 +95,37 @@ class ImagePickerFragment : Fragment() {
         }
 
         binding.btnSaveCode.setOnClickListener {
+            if (binding.tvColorCode.text.isEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Please Click on Image",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
 
-            class getTask : AsyncTask<Void, Void, Void>() {
-                override  fun doInBackground(vararg params: Void?): Void? {
+                class getTask : AsyncTask<Void, Void, Void>() {
+                    override fun doInBackground(vararg params: Void?): Void? {
 
-                    list.addAll(UserDataBase.getData(requireContext()).userDao().getAllUser())
+                        list.addAll(UserDataBase.getData(requireContext()).userDao().getAllUser())
 
-                    UserDataBase.getData(requireContext()).userDao()
-                        .addUser(ColorCode(code1 = binding.tvColorCode.text.toString()))
-                    return null
+                        UserDataBase.getData(requireContext()).userDao()
+                            .addUser(ColorCode(code1 = binding.tvColorCode.text.toString()))
+                        return null
+                    }
+                    override fun onPostExecute(result: Void?) {
+                        super.onPostExecute(result)
+                        Toast.makeText(requireContext(), "Save Hex Code", Toast.LENGTH_SHORT)
+                            .show()
+                    }
                 }
-
-                override fun onPostExecute(result: Void?) {
-                    super.onPostExecute(result)
-                    Toast.makeText(requireContext(), "Save Hex Code", Toast.LENGTH_SHORT)
-                        .show()
-                }
-                }
-            getTask().execute()
-
+                getTask().execute()
+            }
         }
     }
-
-   
     private fun onTouchEvent(event: MotionEvent) : Boolean{
         scaleGestureDetector.onTouchEvent(event)
         return true
-
     }
-
     private val gallery=registerForActivityResult(ActivityResultContracts.GetContent()){
             uri: Uri? ->
         uri?.let {

@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/imageFragment"
-        android:name="com.o7solutions.imgrgbpicker.ImageFragment"
+        android:name="com.o7solutions.imgrgbpicker.ui.fragments.ImagePickerFragment"
         android:label="fragment_image"
         tools:layout="@layout/fragment_image_picker" />
     <fragment
         android:id="@+id/createFragment"
-        android:name="com.o7solutions.imgrgbpicker.CreateFragment"
+        android:name="com.o7solutions.imgrgbpicker.ui.fragments.CreateColorRgbFragment"
         android:label="fragment_create"
         tools:layout="@layout/fragment_create_color_rgb" />
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.o7solutions.imgrgbpicker.HistoryFragment"
+        android:name="com.o7solutions.imgrgbpicker.ui.fragments.HexCodeHistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_hex_code_history" />
 </navigation>

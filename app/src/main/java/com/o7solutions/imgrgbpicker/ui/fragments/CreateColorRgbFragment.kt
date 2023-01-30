@@ -118,23 +118,31 @@ class CreateColorRgbFragment : Fragment() {
         }
 
         binding.btnSaveCode.setOnClickListener {
-            class getTask : AsyncTask<Void, Void, Void>() {
-                override fun doInBackground(vararg params: Void?): Void? {
+            if (binding.tvColorCode.text.isEmpty()) {
+                Toast.makeText(
+                    requireContext(),
+                    "Please Create Color Code",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
 
-                    list.addAll(UserDataBase.getData(requireContext()).userDao().getAllUser())
+                class getTask : AsyncTask<Void, Void, Void>() {
+                    override fun doInBackground(vararg params: Void?): Void? {
 
-                    UserDataBase.getData(requireContext()).userDao()
-                        .addUser(ColorCode(code1 = binding.tvColorCode.text.toString()))
-                    return null
+                        list.addAll(UserDataBase.getData(requireContext()).userDao().getAllUser())
+
+                        UserDataBase.getData(requireContext()).userDao()
+                            .addUser(ColorCode(code1 = binding.tvColorCode.text.toString()))
+                        return null
+                    }
+                    override fun onPostExecute(result: Void?) {
+                        super.onPostExecute(result)
+                        Toast.makeText(requireContext(), "Save Hex Code", Toast.LENGTH_SHORT)
+                            .show()
+                    }
                 }
-
-                override fun onPostExecute(result: Void?) {
-                    super.onPostExecute(result)
-                    Toast.makeText(requireContext(), "Save Hex Code", Toast.LENGTH_SHORT).show()
-
-                }
+                getTask().execute()
             }
-            getTask().execute()
         }
     }
     private fun getColorString(): String{
